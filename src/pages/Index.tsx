@@ -244,6 +244,39 @@ export default function Index() {
           </div>
         </section>
 
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши пациенты</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Счастливые и здоровые питомцы — лучшая награда за нашу работу
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+              {[
+                { src: 'https://cdn.poehali.dev/projects/5a584767-a6fe-43ca-ad86-5288eb4a520f/files/9862999c-3b86-4884-bb5a-009f2126afff.jpg', alt: 'Корги' },
+                { src: 'https://cdn.poehali.dev/projects/5a584767-a6fe-43ca-ad86-5288eb4a520f/files/2f0d6aa5-dc2b-4c94-b4e6-d636d4cd30ef.jpg', alt: 'Персидская кошка' },
+                { src: 'https://cdn.poehali.dev/projects/5a584767-a6fe-43ca-ad86-5288eb4a520f/files/c68d61ca-1998-47af-92cb-912161a5e202.jpg', alt: 'Бигль' },
+                { src: 'https://cdn.poehali.dev/projects/5a584767-a6fe-43ca-ad86-5288eb4a520f/files/fb18a7a6-3a4f-4bfa-82cb-3d70947e2e7f.jpg', alt: 'Мейн-кун' },
+                { src: 'https://cdn.poehali.dev/projects/5a584767-a6fe-43ca-ad86-5288eb4a520f/files/a948890d-9865-4660-bfec-f2e0ed315d30.jpg', alt: 'Лабрадор' },
+                { src: 'https://cdn.poehali.dev/projects/5a584767-a6fe-43ca-ad86-5288eb4a520f/files/aef972fc-328b-4388-926b-53278e3a10b3.jpg', alt: 'Британский котенок' }
+              ].map((item, index) => (
+                <div 
+                  key={index}
+                  className="relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <img 
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="py-20 bg-muted/50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
